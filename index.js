@@ -3,7 +3,7 @@ const chatMessages = document.getElementById('chat-messages');
 let newMessage = null;
 
 inputField.addEventListener('keydown', (event) => {
- if (event.key === 'Enter' || document.getElementById("submit") {
+ if (event.key === 'Enter' || document.getElementById("submit")) {
    const query = inputField.value;
          // Clear the input field
        inputField.value = '';
