@@ -48,6 +48,7 @@ body {
 .message {
   display: none;
   animation: fadeIn 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -58,16 +59,4 @@ body {
  to {
     opacity: 1;
  }
-}
-
-.fade-out {
- animation-name: fadeOut; 
- animation-duration:1s; 
- animation-fill-mode : forwards; 
- animation-timing-function : ease-in-out; 
-}
-
-@keyframes fadeOut {
- from {opacity :1;}
- to {opacity :0;}
 }
