@@ -39,23 +39,17 @@ inputField.addEventListener('keydown', (event) => {
        // Fade in the message element
        setTimeout(() => {
          newMessage.style.display = 'block';
+         const messages = document.querySelectorAll('.message');
+         if (messages.length > 1) {
+           messages[messages.length - 2].style.opacity = 0;
+           setTimeout(() => {
+             messages[messages.length - 2].remove();
+           }, 1000);
+         }
        },100);
 
        // Clear the input field
        inputField.value = '';
-
-       // Remove previous message with fade out effect
-       const previousMessage = document.querySelector('.message');
-       if (previousMessage) {
-         previousMessage.style.opacity = 1;
-         (function fade() {
-           if ((previousMessage.style.opacity -= .1) < 0) {
-             previousMessage.style.display = 'none';
-           } else {
-             requestAnimationFrame(fade);
-           }
-         })();
-       }
      })
      .catch(error => {
        console.error('Error:', error);
