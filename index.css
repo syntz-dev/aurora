@@ -1,0 +1,73 @@
+body {
+    font-family: sans-serif;
+    font-family: "Exo", sans-serif;
+    background: #070815;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    background-image: radial-gradient(#ffffff17 1px, transparent 0),
+        linear-gradient(187deg, #070815 0%, #0c0310 100%);
+    background-size: 40px 40px, 100% 100%;
+    background-position: -19px -19px, 0 0;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#chat-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#submit {
+  padding: 10px 20px;
+}
+
+.message {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+ to {
+    opacity: 1;
+ }
+}
+
+.fade-out {
+ animation-name : fadeOut ;
+ animation-duration : .5s ;
+ animation-timing-function : ease-in-out ;
+ animation-fill-mode : forwards ;
+}
+
+@keyframes fadeOut {
+ from {opacity :1;}
+ to {opacity :0;}
+}
