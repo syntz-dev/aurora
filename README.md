@@ -1,2 +1,2 @@
 # aurora
-ai for my website
+nothing (yet)
