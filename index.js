@@ -1,6 +1,7 @@
 const inputField = document.getElementById('input');
 const chatMessages = document.getElementById('chat-messages');
 let lastMessage = null;
+let newMessage = null;
 
 inputField.addEventListener('keydown', (event) => {
  if (event.key === 'Enter') {
@@ -26,19 +27,19 @@ inputField.addEventListener('keydown', (event) => {
        console.log('Output:', data.output);
 
        // Create a new message element
-       const messageElement = document.createElement('div');
-       messageElement.classList.add('message');
-       messageElement.textContent = data.output.text;
+       newMessage = document.createElement('div');
+       newMessage.classList.add('message');
+       newMessage.textContent = data.output.text;
 
        // Append the message element to the chat messages container
-       chatMessages.appendChild(messageElement);
+       chatMessages.appendChild(newMessage);
 
        // Scroll to the bottom of the chat messages container
        chatMessages.scrollTop = chatMessages.scrollHeight;
 
        // Fade in the message element
        setTimeout(() => {
-         messageElement.style.display = 'block';
+         newMessage.style.display = 'block';
        },100);
 
        // Fade out the last message
@@ -48,7 +49,7 @@ inputField.addEventListener('keydown', (event) => {
        }
 
        // Set the current message as the last message
-       lastMessage = messageElement;
+       lastMessage = newMessage;
 
        // Clear the input field
        inputField.value = '';
