@@ -5,6 +5,8 @@ let newMessage = null;
 inputField.addEventListener('keydown', (event) => {
  if (event.key === 'Enter' || document.getElementById("submit") {
    const query = inputField.value;
+         // Clear the input field
+       inputField.value = '';
 
    const data = {
      text: query,
@@ -48,8 +50,7 @@ inputField.addEventListener('keydown', (event) => {
          }
        },100);
 
-       // Clear the input field
-       inputField.value = '';
+
      })
      .catch(error => {
        console.error('Error:', error);
