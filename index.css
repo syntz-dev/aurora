@@ -16,7 +16,7 @@ body {
 	background-size: 22px 22px;
     background-position: -19px -19px, 0 0;
     animation: breath 20s ease-in-out infinite;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
