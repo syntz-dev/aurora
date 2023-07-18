@@ -53,11 +53,11 @@ function sendMessage() {
           }, 1000);
         }
       },100);
-          // Clear the input field
-      inputField.value = '';
-
     })
     .catch(error => {
       console.error('Error:', error);
     });
+
+  // Clear the input field
+  inputField.value = '';
 }
