@@ -15,7 +15,7 @@ function sendMessage() {
   const data = {
     text: query,
     key: '931605b9-87c1-45af-b9b8-b59b8f5ad17a',
-    user_id: 'website-user',
+    user_id: 'website-user-' + Math.random().toString(36).substring(2, 15),
     speak: false
   };
 
