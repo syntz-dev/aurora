@@ -17,11 +17,11 @@ body {
 }
 
 .chat-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 #chat-messages {
@@ -37,19 +37,32 @@ body {
 }
 
 #input {
-  padding: 10px;
-  margin-right: 10px;
+    margin-right: 10px;
+    border: 2px solid rgb(242, 242, 242);
+    caret-color: rgb(242, 242, 242);
+    color: rgb(242, 242, 242);
+    -webkit-animation: inputVisibilityB .8s infinite alternate;
+    animation: inputVisibilityB .8s infinite alternate;
+    background: transparent;
+    bottom: 32px;
+    font-weight: 320;
+    height: 32px;
+    outline: none;
+    padding: 0 8px;
+    position: absolute;
+    transition: border-color .1s,color .1s,text-shadow .1s,-webkit-transform .3s;
+    transition: border-color .1s,color .1s,text-shadow .1s,transform .3s;
+    transition: border-color .1s,color .1s,text-shadow .1s,transform .3s,-webkit-transform .3s;
+    width: 240px;
 }
 
-#submit {
-  padding: 10px 20px;
-}
 
 .message {
-  display: none;
-  animation: fadeIn 0.5s ease-in-out;
-  transition: opacity 1s ease-in-out;
-  margin-inline: 10%;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    margin-inline: 10%;
+    position: absolute;
 }
 
 @keyframes fadeIn {
