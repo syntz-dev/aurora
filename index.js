@@ -9,10 +9,6 @@ inputField.addEventListener('keydown', (event) => {
  }
 });
 
-submitButton.addEventListener('click', () => {
-  sendMessage();
-});
-
 function sendMessage() {
   const query = inputField.value;
 
