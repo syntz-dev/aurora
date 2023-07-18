@@ -9,10 +9,18 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+.background {
 	background: linear-gradient(90deg, #161122 21px, transparent 1%) center, linear-gradient(#161122 21px, transparent 1%) center, #a799cc;
 	background-size: 22px 22px;
     background-position: -19px -19px, 0 0;
     animation: breath 4s ease-in-out infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .chat-container {
