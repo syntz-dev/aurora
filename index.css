@@ -1,3 +1,11 @@
+// Colors
+$bg-color: hsl(266,100,6);
+$dot-color: hsl(265,18,44);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 30px;
+
 body {
     font-family: sans-serif;
     font-family: "Exo", sans-serif;
@@ -9,11 +17,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-
-    background-image: radial-gradient(#ffffff17 1px, transparent 0),
-        linear-gradient(187deg, #070815 0%, #0c0310 100%);
-    background-size: 40px 40px, 100% 100%;
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
     background-position: -19px -19px, 0 0;
+    animation: breath 4s ease-in-out infinite;
 }
 
 .chat-container {
@@ -73,4 +83,16 @@ body {
  to {
     opacity: 1;
  }
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
