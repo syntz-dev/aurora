@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 .background {
 	background: linear-gradient(90deg, #0c0913 20.6px, transparent 1%) center, linear-gradient(#0c0913 21.6px, transparent 1%) center, #a799cc;
 	background-size: 22px 22px;
