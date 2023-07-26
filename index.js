@@ -209,7 +209,6 @@ function setTextareaHeight() {
 
 // Add event listeners to adjust the textarea height dynamically
 textarea.addEventListener("input", setTextareaHeight);
-const inputField = document.getElementById("input");
 const chatMessages = document.getElementById("chat-messages");
 const loadingContainer = document.getElementById("loading-container");
 let newMessage = null;
